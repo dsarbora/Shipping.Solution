@@ -1,0 +1,12 @@
+@using Parcels.Models;
+
+<h1>Your package</h1>
+
+@foreach(Package package in @Package.GetList())
+{
+<p>PACKAGE NUMBER @package.GetPackageID()</p>
+<p>Your package volume: @package.GetVolume()</p>
+<p>Your cost to ship: @package.CostToShip()</p>
+<p>--------------------------------------</p>
+}
+<a href="/">Add a new package</a>
